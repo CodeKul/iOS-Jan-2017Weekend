@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SliderMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSv-Ob-uis">
+                                <rect key="frame" x="-200" y="0.0" width="200" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codekul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pht-mb-08Q">
+                                        <rect key="frame" x="68" y="18" width="64" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFU-l4-whV">
+                                        <rect key="frame" x="77" y="47" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55686277149999996" green="0.35294118520000001" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hFU-l4-whV" firstAttribute="top" secondItem="Pht-mb-08Q" secondAttribute="bottom" constant="8" id="FU7-uJ-Q5N"/>
+                                    <constraint firstItem="Pht-mb-08Q" firstAttribute="centerX" secondItem="BSv-Ob-uis" secondAttribute="centerX" id="K0p-b6-oI7"/>
+                                    <constraint firstItem="hFU-l4-whV" firstAttribute="centerX" secondItem="BSv-Ob-uis" secondAttribute="centerX" id="Y0e-y1-hD1"/>
+                                    <constraint firstAttribute="width" constant="200" id="h0K-D2-mkg"/>
+                                    <constraint firstItem="Pht-mb-08Q" firstAttribute="top" secondItem="BSv-Ob-uis" secondAttribute="top" constant="18" id="jfc-1f-as1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-XP-C8S">
+                                <rect key="frame" x="262" y="20" width="39" height="30"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="menuButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vv1-TS-1Yn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058959999999" green="0.85098040100000005" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BSv-Ob-uis" secondAttribute="bottom" id="6Mp-hP-o2I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I7U-XP-C8S" secondAttribute="trailing" constant="3" id="DYK-3y-zX3"/>
+                            <constraint firstItem="I7U-XP-C8S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q1k-Ge-aS6"/>
+                            <constraint firstItem="BSv-Ob-uis" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YzF-ra-JAS"/>
+                            <constraint firstItem="BSv-Ob-uis" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-200" id="aaB-Hy-fPO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leadingConstraints" destination="aaB-Hy-fPO" id="8CP-qu-DQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+</document>

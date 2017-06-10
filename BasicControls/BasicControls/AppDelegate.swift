@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  BasicControls
 //
-//  Created by Aditya Goyal on 25/02/17.
-//  Copyright © 2017 Aditya Goyal. All rights reserved.
+//  Created by Codekul on 19/02/17.
+//  Copyright © 2017 CodeKul. All rights reserved.
 //
 
 import UIKit

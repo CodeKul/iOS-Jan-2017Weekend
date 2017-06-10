@@ -2,22 +2,46 @@
 //  ViewController.swift
 //  BasicControls
 //
-//  Created by Aditya Goyal on 25/02/17.
-//  Copyright © 2017 Aditya Goyal. All rights reserved.
+//  Created by Codekul on 19/02/17.
+//  Copyright © 2017 CodeKul. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var myValueLabel: UILabel!
     
-    @IBOutlet weak var mySlider: UISlider!
+    var myLabel : UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.red
+        myLabel = UILabel(frame: CGRect(x: 10, y: 20, width: 300, height: 30))
+        
+        myLabel!.text = "Welcome to codekul"
+        myLabel!.textAlignment = .center
+        
+        myLabel!.textColor = UIColor.red
+        
+        
+        let myButton = UIButton(frame: CGRect(x: 110, y: myLabel!.frame.origin.y + myLabel!.frame.size.height + 20, width: 100, height: 30))
+        
+        
+        myButton.setTitle("Go", for: .normal)
+        
+        myButton.setTitleColor(UIColor.gray, for: .normal)
+        myButton.backgroundColor = UIColor.cyan
+        
+        myButton.addTarget(self, action: #selector(buttonClicked(_ :)), for: .touchUpInside)
+        
+        self.view.addSubview(myButton)
+        self.view.addSubview(myLabel!)
+        
+    }
+    
+    func buttonClicked(_ sender : UIButton) {
+        
+        myLabel!.text = "Hi, there !"
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,42 +49,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        
-        if sender.selectedSegmentIndex == 0 {
-            self.view.backgroundColor = UIColor.red
-        }
-        else if sender.selectedSegmentIndex == 1 {
-            self.view.backgroundColor = UIColor.blue
-        }
-        else if sender.selectedSegmentIndex == 2 {
-            self.view.backgroundColor = UIColor.green
-        }
-    }
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
-        
-        myValueLabel.text = "\(sender.value)"
-        
-    }
-    @IBAction func switchValueChanged(_ sender: UISwitch) {
-     
-        if sender.isOn {
-            mySlider.isUserInteractionEnabled = true
-        }
-        else {
-            mySlider.isUserInteractionEnabled = false
-        }
-    }
-    @IBAction func datePicked(_ sender: UIDatePicker) {
-        
-        let df = DateFormatter()
-        df.dateFormat = "dd-MMM-yyyy"
-        
-        print("Date: \(df.string(from: sender.date))")
-        
-        
-
-    }
 
 }
 
